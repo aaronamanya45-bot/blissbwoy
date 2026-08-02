@@ -1,0 +1,386 @@
+/* ==========================================
+   BLISSBWOY WEBSITE
+   ANIMATIONS STYLESHEET
+========================================== */
+
+
+/* =============== PAGE LOADER =============== */
+
+
+.loader{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#090909;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:hideLoader 2s forwards;
+
+}
+
+
+.loader-logo{
+
+    font-size:50px;
+    font-weight:800;
+    color:#FFD700;
+    letter-spacing:5px;
+    animation:pulseLogo 1.5s infinite;
+
+}
+
+
+
+@keyframes hideLoader{
+
+    0%,80%{
+
+        opacity:1;
+        visibility:visible;
+
+    }
+
+    100%{
+
+        opacity:0;
+        visibility:hidden;
+
+    }
+
+}
+
+
+
+@keyframes pulseLogo{
+
+    50%{
+
+        transform:scale(1.1);
+
+    }
+
+}
+
+
+
+/* =============== HERO ANIMATIONS =============== */
+
+
+.hero-content{
+
+    animation:heroAppear 1.5s ease;
+
+}
+
+
+
+@keyframes heroAppear{
+
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+/* =============== BUTTON ANIMATION =============== */
+
+
+.btn-primary,
+.btn-secondary{
+
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+
+.btn-primary::before,
+.btn-secondary::before{
+
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.3);
+    transition:.5s;
+
+}
+
+
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before{
+
+
+    left:100%;
+
+}
+
+
+
+/* =============== FLOATING EFFECT =============== */
+
+
+.scroll-down{
+
+
+    animation:float 2s infinite;
+
+}
+
+
+
+@keyframes float{
+
+
+    50%{
+
+        transform:translate(-50%,15px);
+
+    }
+
+
+}
+
+
+
+/* =============== CARD ANIMATION =============== */
+
+
+.song-card,
+.stat-box,
+.event{
+
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+/* =============== IMAGE EFFECTS =============== */
+
+
+.about-image img,
+.song-card img{
+
+
+    transition:.5s;
+
+}
+
+
+
+.about-image img:hover,
+.song-card img:hover{
+
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* =============== SOCIAL ICON EFFECT =============== */
+
+
+.social-icons a{
+
+
+    transition:.4s;
+
+}
+
+
+
+.social-icons a:hover{
+
+
+    transform:translateY(-8px) rotate(10deg);
+
+}
+
+
+
+/* =============== TITLE ANIMATION =============== */
+
+
+.section-title{
+
+
+    animation:titleSlide 1s ease;
+
+}
+
+
+
+@keyframes titleSlide{
+
+
+    from{
+
+        opacity:0;
+        letter-spacing:20px;
+
+    }
+
+
+    to{
+
+        opacity:1;
+        letter-spacing:normal;
+
+    }
+
+
+}
+
+
+
+/* =============== GLOW EFFECT =============== */
+
+
+.logo,
+.hero h1,
+footer h3{
+
+
+    text-shadow:
+
+    0 0 10px rgba(255,215,0,.4),
+    0 0 20px rgba(255,215,0,.2);
+
+}
+
+
+
+/* =============== SMOOTH REVEAL CLASSES =============== */
+
+
+.reveal{
+
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+
+}
+
+
+
+.reveal.active{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+
+
+/* =============== MUSIC NOTE EFFECT =============== */
+
+
+.music-note{
+
+
+    position:absolute;
+    color:#FFD700;
+    font-size:25px;
+    animation:musicFloat 5s infinite;
+
+}
+
+
+
+@keyframes musicFloat{
+
+
+    from{
+
+        transform:translateY(100px);
+        opacity:0;
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+    }
+
+
+    to{
+
+        transform:translateY(-400px);
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+/* =============== MOBILE PERFORMANCE =============== */
+
+
+@media(max-width:600px){
+
+
+    .loader-logo{
+
+        font-size:35px;
+
+    }
+
+
+}
